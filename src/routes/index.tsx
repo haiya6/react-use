@@ -4,6 +4,9 @@ import BackendDemo from '@/views/backend/demo'
 
 import Unknown from '@/views/unknown'
 
+export * from './useActivePaths'
+export * from './useRoutes'
+
 export interface RouteItem {
   // route path(key) unique!
   // full path starts width /
@@ -42,6 +45,3 @@ export const routes: RouteItem[] = [
     element: <Unknown />
   }
 ]
-
-export * from './useActivePaths'
-export * from './useRoutes'

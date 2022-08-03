@@ -12,8 +12,7 @@ export const useAccountRoutes = () => {
   return accountRoutes
 }
 
-export const useBackendRoutes = () => {
+export const useBackendRoute = () => {
   const accountRoutes = useAccountRoutes()
-  const result = accountRoutes.find(route => route.path === '/backend')
-  return result?.children ?? []
+  return accountRoutes.find(route => route.path === '/backend')
 }
