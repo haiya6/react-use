@@ -1,3 +1,4 @@
+import { RedditCircleFilled, SmileFilled } from '@ant-design/icons'
 import Backend from '@/views/backend'
 import BackendWelcome from '@/views/backend/welcome'
 import BackendDemo from '@/views/backend/demo'
@@ -13,6 +14,8 @@ export interface RouteItem {
   path: string
   // menu label
   label: string
+  // menu icon
+  icon?: React.ReactNode
   // permission
   permission?: string
   // route element
@@ -30,11 +33,13 @@ export const routes: RouteItem[] = [
       {
         path: '/backend/welcome',
         label: 'Welcome',
+        icon: <SmileFilled />,
         element: <BackendWelcome />,
       },
       {
         path: '/backend/demo',
         label: 'Demo',
+        icon: <RedditCircleFilled />,
         element: <BackendDemo />,
       }
     ]
