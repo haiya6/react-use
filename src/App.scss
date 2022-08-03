@@ -1,0 +1,18 @@
+.layout {
+  .layout__header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+
+    .header__title {
+      line-height: 64px;
+      color: #000;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .header__menu {
+      margin-left: 20px;
+    }
+  }
+}
