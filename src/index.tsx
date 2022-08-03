@@ -1,11 +1,16 @@
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import { BrowserRouter } from 'react-router-dom'
+import App from '@/App'
 
-import 'antd/dist/antd.css'
-import './index.scss'
+import 'antd/dist/antd.min.css'
+import '@/index.scss'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 )
 
-root.render(<App />)
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
