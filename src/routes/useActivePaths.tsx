@@ -15,6 +15,7 @@ export const useActivePaths = () => {
     let currentRoutes: RouteItem[] | undefined = accountRoutes
 
     while(currentRoutes) {
+      let found = false
       for(let i = 0; i < currentRoutes!.length; i++) {
         const route = currentRoutes![i] as RouteItem
         const routePaths = route.path.split('/').slice(1)
@@ -22,10 +23,13 @@ export const useActivePaths = () => {
           paths.push(route.path)
           currentRoutes = route.children
           depth++
+          found = true
           break
         }
       }
-      currentRoutes = undefined
+      if (!found) {
+        currentRoutes = undefined
+      }
     }
 
     setActivePaths(paths)
