@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { Layout, Menu, MenuProps } from 'antd'
 import Welcome from './welcome'
 import Demo from './demo'
+import { useAccountRoutes } from '../../routes'
 
 const menuItems: MenuProps['items'] = [
   {
@@ -16,6 +17,8 @@ const menuItems: MenuProps['items'] = [
 ]
 
 const Backend: React.FC = () => {
+  const accountRoutes = useAccountRoutes()
+
   return (
     <Layout style={{ minHeight: 'calc(100vh - 64px)' }}>
       <Layout.Sider theme="light">

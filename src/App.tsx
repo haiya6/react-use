@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Routes, Navigate, useNavigate } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
-import { useAccountRoutes, useActivePaths } from './routes'
+import { useAccountRoutes, useActivePaths } from '@/routes'
 
-import './App.scss'
+import '@/App.scss'
 
 const App: React.FC = () => {
   const accountRoutes = useAccountRoutes()
