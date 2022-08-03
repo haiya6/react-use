@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
 import { Button, Layout, Menu } from 'antd'
 import { useBackendRoute, useActivePaths } from '@/routes'
 
 import './index.scss'
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 
 const Backend: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false)
