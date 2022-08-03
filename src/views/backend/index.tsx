@@ -23,7 +23,7 @@ const Backend: React.FC = () => {
       </Layout.Sider>
       <Layout.Content style={{ padding: 15 }}>
         <Routes>
-          <Route path="/" element={ <Navigate to="/backend/welcome" /> } />
+          <Route index element={ <Navigate to="welcome" /> } />
           <Route path='welcome' element={<Welcome />} />
           <Route path='demo' element={<Demo />} />
         </Routes>
