@@ -18,7 +18,7 @@ const Backend: React.FC = () => {
 
   return (
     <Layout className="backend-layout">
-      <Layout.Sider theme="light" collapsed={collapsed}>
+      <Layout.Sider className="backend__sider" theme="light" collapsed={collapsed}>
         <Menu 
           theme="light"
           items={backendRoute.children.map(route => ({ key: route.path, label: route.label, icon: route.icon }))} 
@@ -26,7 +26,7 @@ const Backend: React.FC = () => {
           onSelect={({ key }) => navigate(key)}
         />
       </Layout.Sider>
-      <Layout.Content>
+      <Layout.Content className="backend__content">
         <Layout.Header className="content__header">
           <Button 
             type="text" 
