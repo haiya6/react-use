@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const activePaths = useActivePaths()
 
   return (
-    <Layout className="layout">
+    <Layout className="root-layout">
       <Layout.Header className="layout__header">
         <h2 className="header__title">React use</h2>
         <Menu
@@ -22,9 +22,10 @@ const App: React.FC = () => {
           onSelect={({ key }) => navigate(key)}
         />
       </Layout.Header>
-      <Layout.Content>
+
+      <Layout.Content className="layout__content">
         <Routes>
-          <Route path="/" element={ <Navigate to="/backend" /> } />
+          <Route path="/" element={<Navigate to="/backend" />} />
           {
             accountRoutes.map(route => {
               return (

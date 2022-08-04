@@ -1,8 +1,12 @@
-.layout {
+.root-layout {
   .layout__header {
     display: flex;
     align-items: center;
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
     .header__title {
       line-height: 64px;
@@ -14,5 +18,9 @@
     .header__menu {
       margin-left: 20px;
     }
+  }
+
+  .layout__content {
+    padding-top: 64px;
   }
 }
