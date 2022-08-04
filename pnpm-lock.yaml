@@ -7,11 +7,13 @@ specifiers:
   '@testing-library/react': ^13.3.0
   '@testing-library/user-event': ^13.5.0
   '@types/jest': ^27.5.2
+  '@types/mockjs': ^1.0.6
   '@types/node': ^16.11.47
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
   antd: ^4.22.3
   eslint: ^8.21.0
+  mockjs: ^1.1.0
   react: ^18.2.0
   react-app-rewired: ^2.2.1
   react-dom: ^18.2.0
@@ -34,6 +36,7 @@ dependencies:
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
   antd: 4.22.3_react-dom@18.2.0+react@18.2.0
+  mockjs: 1.1.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.2_8ddf45de17920261abb19716b35d7e36
@@ -45,6 +48,7 @@ dependencies:
   web-vitals: 2.1.4
 
 devDependencies:
+  '@types/mockjs': 1.0.6
   eslint: 8.21.0
   react-app-rewired: 2.2.1_react-scripts@5.0.1
 
@@ -2437,6 +2441,10 @@ packages:
   /@types/mime/3.0.0:
     resolution: {integrity: sha512-fccbsHKqFDXClBZTDLA43zl0+TbxyIwyzIzwwhvoJvhNjOErCdeX2xJbURimv2EbSVUGav001PaCJg4mZxMl4w==}
     dev: false
+
+  /@types/mockjs/1.0.6:
+    resolution: {integrity: sha512-Yu5YlqbYZyqsd6LjO4e8ONJDN9pTSnciHDcRP4teNOh/au2b8helFhgRx+3w8xsTFEnwr9jtfTVJbAx+eYmlHA==}
+    dev: true
 
   /@types/node/16.11.47:
     resolution: {integrity: sha512-fpP+jk2zJ4VW66+wAMFoBJlx1bxmBKx4DUFf68UHgdGCOuyUTDlLWqsaNPJh7xhNDykyJ9eIzAygilP/4WoN8g==}
@@ -6736,6 +6744,13 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.6
+    dev: false
+
+  /mockjs/1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
     dev: false
 
   /moment/2.29.4:
