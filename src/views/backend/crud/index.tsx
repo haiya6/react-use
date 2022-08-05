@@ -1,12 +1,12 @@
 import React from 'react'
 import SearchForm from './SearchForm'
-import List from './List'
+import List, { generateData } from './List'
 
 const CRUD: React.FC = () => {
   return (
     <>
       <SearchForm />
-      <List />
+      <List data={generateData(6)} />
     </>
   )
 }
