@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 )
 
 root.render(
-  <HashRouter basename={ process.env.NODE_ENV === 'development' ? '/' : '/react-use/' }>
+  <HashRouter>
     <App />
   </HashRouter>
 )
