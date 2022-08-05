@@ -4,7 +4,7 @@ import type { ColumnsType } from 'antd/es/table'
 import { LineChartOutlined } from '@ant-design/icons'
 import Mock from 'mockjs'
 
-interface DataType {
+export interface DataType {
   key: string
   InstanceId: string
   InstanceName: string
@@ -83,7 +83,7 @@ const columns: ColumnsType<DataType> = [
   }
 ]
 
-function generateData(q: number): DataType[] {
+export function generateData(q: number): DataType[] {
   return new Array(q).fill(0).map(() => {
     const id = `ins-${Mock.Random.word(8)}`
 
@@ -102,9 +102,11 @@ function generateData(q: number): DataType[] {
   })
 }
 
-const List: React.FC = () => {
+const List: React.FC<{
+  data: DataType[]
+}> = (props) => {
   return (
-    <Table columns={columns} dataSource={generateData(5)} />
+    <Table columns={columns} dataSource={props.data} />
   )
 }
 
