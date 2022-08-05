@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 )
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={ process.env.NODE_ENV === 'development' ? '/' : '/react-use/' }>
     <App />
   </BrowserRouter>
 )
