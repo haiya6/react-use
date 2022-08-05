@@ -24,6 +24,7 @@ const columns: ColumnsType<DataType> = [
     render: (_, record) => {
       return (
         <>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a href="#">{record.InstanceId}</a>
           <br />
           <span>{record.InstanceName}</span>
