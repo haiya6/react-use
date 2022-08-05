@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import App from '@/App'
 
 import 'antd/dist/antd.min.css'
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 )
 
 root.render(
-  <BrowserRouter basename={ process.env.NODE_ENV === 'development' ? '/' : '/react-use/' }>
+  <HashRouter basename={ process.env.NODE_ENV === 'development' ? '/' : '/react-use/' }>
     <App />
-  </BrowserRouter>
+  </HashRouter>
 )
